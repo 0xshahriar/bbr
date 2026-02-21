@@ -16,7 +16,6 @@
 - [Configuration](#configuration)
 - [Integrations](#integrations)
 - [Dashboard](#dashboard)
-- [Troubleshooting](#troubleshooting)
 - [Community](#community)
 
 ## Introduction
