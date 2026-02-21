@@ -122,16 +122,6 @@ Features:
 - Search and filter
 - Mobile responsive
 
-## Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Arithmetic error | Fixed in v1.0 - variables initialized |
-| Nuclei JSON mixing | Fixed in v1.0 - output separated |
-| Progress bar too big | Fixed in v1.0 - compact single-line |
-| ANSI codes in dashboard | Fixed in v1.0 - auto-stripped |
-| Hangs at 98% | Fixed in v1.0 - better cleanup |
-
 ## Community
 
 - 💬 Telegram: [@bbr_tool](https://t.me/bbr_tool)
