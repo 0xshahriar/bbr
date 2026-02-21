@@ -1,0 +1,207 @@
+# BBR Configuration File v1.0
+# Place this file at ~/.bbr/config.yaml or specify with --config
+#
+# Documentation: https://github.com/yourusername/bbr#configuration
+# Community: https://t.me/bbr_tool (Telegram)
+#            https://discord.gg/bbr (Discord)
+
+################################################################################
+#                              CORE SETTINGS                                   #
+################################################################################
+
+# Rate Limits (requests per second)
+rate_limit_httpx: 50
+rate_limit_nuclei: 30
+rate_limit_katana: 20
+rate_limit_naabu: 100
+
+################################################################################
+#                          CONTINUOUS MODE SETTINGS                            #
+################################################################################
+
+# Enable continuous monitoring mode
+continuous_mode: false
+
+# Check interval (e.g., 1h, 6h, 24h, 7d)
+continuous_interval: "24h"
+
+# Only alert on new findings (delta detection)
+delta_alert: true
+
+# Directory to store baseline data
+baseline_directory: "~/.bbr/baselines"
+
+################################################################################
+#                         RESOURCE MANAGEMENT                                  #
+################################################################################
+
+# Maximum memory usage (e.g., 2G, 4G, 8G)
+max_memory: "4G"
+
+# Maximum disk usage for output (e.g., 10G, 50G, 100G)
+max_disk: "50G"
+
+# Cache time-to-live (e.g., 1h, 12h, 24h, 7d)
+cache_ttl: "24h"
+
+# Auto-cleanup old data when disk limit reached
+auto_cleanup: true
+
+# Cleanup files older than N days
+cleanup_max_age: 7
+
+################################################################################
+#                            FEATURE FLAGS                                     #
+################################################################################
+
+# Enable cloud reconnaissance (AWS, Azure, GCP)
+cloud_recon: true
+
+# Enable supply chain security scanning
+supply_chain: true
+
+# Enable OSINT collection
+osint: true
+
+# Enable smart resume capability
+smart_resume: true
+
+# Enable metrics collection
+metrics_enabled: true
+
+################################################################################
+#                           NUCLEI SETTINGS                                    #
+################################################################################
+
+# Show live progress bar during nuclei scan
+nuclei_stats: true
+
+# Nuclei severity levels to scan (comma-separated)
+# Options: critical,high,medium,low,info
+nuclei_severity: "critical,high,medium,low,info"
+
+# Auto-update nuclei templates (checks once per 7 days)
+nuclei_auto_update_templates: true
+
+################################################################################
+#                            GF PATTERN SETTINGS                               #
+################################################################################
+
+# gf pattern files are stored in ~/.gf/
+# BBR will auto-install them from tomnomnom/gf on first run if missing.
+gf_patterns:
+  - xss
+  - sqli
+  - ssrf
+  - lfi
+  - rce
+  - redirect
+  - idor
+  - debug-pages
+  - s3-buckets
+
+################################################################################
+#                         NOTIFICATION SETTINGS                                #
+################################################################################
+
+# Slack webhook URL
+# Get from: https://api.slack.com/messaging/webhooks
+# Guide: https://github.com/yourusername/bbr/blob/main/docs/slack-integration.md
+# slack_webhook: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+
+# Discord webhook URL
+# Get from: Server Settings → Integrations → Webhooks
+# Guide: https://github.com/yourusername/bbr/blob/main/docs/discord-integration.md
+# discord_webhook: "https://discord.com/api/webhooks/YOUR/WEBHOOK/URL"
+
+# Telegram bot token and chat ID
+# Get from: @BotFather on Telegram
+# Guide: https://github.com/yourusername/bbr/blob/main/docs/telegram-integration.md
+# telegram_bot_token: "YOUR_BOT_TOKEN"
+# telegram_chat_id: "YOUR_CHAT_ID"
+
+# Email notifications (SMTP)
+# smtp_server: "smtp.gmail.com"
+# smtp_port: 587
+# smtp_username: "your-email@gmail.com"
+# smtp_password: "your-app-password"
+# notification_email: "security@company.com"
+
+################################################################################
+#                          NETWORK SETTINGS                                    #
+################################################################################
+
+# Proxy URL (socks5:// or http://)
+# proxy_url: "socks5://127.0.0.1:9050"
+
+# Use Tor network
+use_tor: false
+
+# DNS over HTTPS server
+# Options: cloudflare, google, quad9
+doh_server: "cloudflare"
+
+# Enable Cloudflare bypass techniques
+cloudflare_bypass: false
+
+# Request timeout in seconds
+timeout: 30
+
+################################################################################
+#                           STEALTH SETTINGS                                   #
+################################################################################
+
+# Rotate User-Agent strings
+user_agent_rotation: true
+
+# Add random delays between requests (jitter)
+request_jitter: true
+
+# Scan only during specific time window (24h format)
+# time_window: "09:00-17:00"
+
+################################################################################
+#                          DASHBOARD SETTINGS                                  #
+################################################################################
+
+# Dashboard port
+dashboard_port: 3000
+
+# Dashboard auto-refresh interval (seconds)
+dashboard_refresh: 30
+
+################################################################################
+#                         CLOUD PROVIDER SETTINGS                              #
+################################################################################
+
+# Cloud providers to check
+cloud_providers:
+  - aws
+  - azure
+  - gcp
+  - digitalocean
+  - alibaba
+
+################################################################################
+#                         OUTPUT SETTINGS                                      #
+################################################################################
+
+# Default output format: html, json, csv, md, all
+output_format: "html"
+
+# Exclude patterns (supports wildcards)
+exclude_patterns:
+  - "*.dev.*"
+  - "*.staging.*"
+  - "*.test.*"
+  - "*.localhost.*"
+
+################################################################################
+#                       TOOL INSTALLATION SETTINGS                             #
+################################################################################
+
+# Directory where git-cloned tools are stored
+tool_install_dir: "~/tools"
+
+# Binary output directory
+tools_bin_dir: "~/go/bin"
