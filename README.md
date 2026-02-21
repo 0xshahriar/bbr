@@ -1,8 +1,8 @@
 # BBR (Bug Bounty Reconnaissance) v1.0
 
-[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/yourusername/bbr)
+[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/0xShahriar/bbr)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Termux-orange.svg)](https://github.com/yourusername/bbr)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Termux-orange.svg)](https://github.com/0xShahriar/bbr)
 
 > Advanced automated reconnaissance tool for bug bounty hunters and security professionals.
 
@@ -48,7 +48,7 @@ BBR is a comprehensive reconnaissance automation framework designed for bug boun
 ### Quick Install
 
 ```bash
-git clone https://github.com/yourusername/bbr.git
+git clone https://github.com/0xShahriar/bbr.git
 cd bbr
 chmod +x assemble.sh
 ./assemble.sh
