@@ -131,7 +131,6 @@ Features:
 
 ```
 bbr/
-├── bbr.sh                 # Main script (assembled)
 ├── bbr_dashboard.py       # Web dashboard
 ├── config.yaml            # Configuration template
 ├── assemble.sh            # Assembly script
